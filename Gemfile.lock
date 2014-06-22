@@ -43,10 +43,14 @@ GEM
     jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jdoc (0.1.2)
+      erubis
+      json_schema
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    json_schema (0.1.4)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -55,6 +59,10 @@ GEM
     multi_json (1.10.1)
     polyglot (0.3.5)
     rack (1.5.2)
+    rack-json_schema (1.0.6)
+      jdoc (>= 0.0.3)
+      json_schema
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.1)
@@ -114,6 +122,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  rack-json_schema
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
