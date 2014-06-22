@@ -7,7 +7,7 @@ unless schema
   raise "Empty schema!"
 end
 
-use Rack::JsonSchema::Docs, schema: schema, path: '/docs.md'
+use Rack::JsonSchema::Docs, schema: schema
 use Rack::JsonSchema::SchemaProvider, schema: schema
 use Rack::JsonSchema::ErrorHandler
 use Rack::JsonSchema::RequestValidation, schema: schema

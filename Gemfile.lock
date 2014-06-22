@@ -74,7 +74,7 @@ GEM
       slop
     polyglot (0.3.5)
     rack (1.5.2)
-    rack-json_schema (1.0.6)
+    rack-json_schema (1.0.7)
       jdoc (>= 0.0.3)
       json_schema
       rack
