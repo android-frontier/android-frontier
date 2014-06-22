@@ -1,0 +1,112 @@
+$schema: http://json-schema.org/draft-04/hyper-schema
+title: Yet another Android atrifact repository
+description: This is a maven repository server
+properties:
+  user:
+    title: Users
+    type: object
+    properties:
+      id:
+        example: gfx
+        readonly: true
+        type:  string
+      groups:
+        example:
+          - com.github.gfx
+          - org.android-frontier
+        type: array
+    links:
+      -
+        method: GET
+        href: /users/#/properties/users/properties/id
+        rel: self
+      -
+        method: GET
+        href: /users
+        rel: instances
+      -
+        method: POST
+        href: /users
+        rel: create
+      -
+        method: PUT
+        href: /users
+        rel: update
+      -
+        method: DELETE
+        href: /users
+        rel: delete
+  group:
+    title: Groups
+    description: A unit that manages artifacts
+    type: object
+    properties:
+      id:
+        example: com.github.gfx
+        readonly: true
+        type:  string
+    links:
+      -
+        method: GET
+        href: /groups/#/properties/groups/properties/id
+        rel: self
+      -
+        method: GET
+        href: /groups
+        rel: instances
+      -
+        method: POST
+        href: /groups
+        rel: create
+      -
+        method: PUT
+        href: /groups
+        rel: update
+      -
+        method: DELETE
+        href: /users
+        rel: delete
+  artifact:
+    title: Artifacts
+    type: object
+    properties:
+      id:
+        title: The artifact id
+        example: something-useful
+        readonly: true
+        type:  string
+      group:
+        title: The group id that manages the artifact
+        example: com.github.gfx
+        readonly: true
+        type: string
+      version:
+        title: The version of the artifact
+        example: 1.2.3
+        readonly: true
+        type: string
+
+    links:
+      -
+        method: GET
+        href: /artifacts/#/properties/artifacts/properties/id
+        rel: self
+      -
+        method: GET
+        href: /artifacts
+        rel: instances
+      -
+        method: POST
+        href: /artifacts
+        rel: create
+      -
+        method: DELETE
+        href: /artifacts
+        rel: delete
+
+
+
+links:
+  -
+    href: http://android-frontier.org/
+    rel: self
